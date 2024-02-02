@@ -1,3 +1,4 @@
+const DICOM_SERVER_URL = process.env.DICOM_SERVER_URL;
 window.config = {
   routerBasename: '/',
   customizationService: {
@@ -16,9 +17,9 @@ window.config = {
   dataSources: [
     {
       name: 'dicomweb_server',
-      wadoUriRoot: 'http://localhost:5985',
-      qidoRoot: 'http://localhost:5985',
-      wadoRoot: 'http://localhost:5985',
+      wadoUriRoot: DICOM_SERVER_URL,
+      qidoRoot: DICOM_SERVER_URL,
+      wadoRoot: DICOM_SERVER_URL,
       qidoSupportsIncludeField: true,
       imageRendering: 'wadouri',
       thumbnailRendering: 'wadors',
@@ -30,11 +31,11 @@ window.config = {
       namespace: '@ohif/extension-default.dataSourcesModule.dicomweb',
       sourceName: 'dicomweb',
       configuration: {
-        friendlyName: 'DCM4CHEE Server',
+        friendlyName: 'DICOMWeb Server',
         name: 'dicomweb_server',
-        wadoUriRoot: 'http://localhost:5985',
-        qidoRoot: 'http://localhost:5985',
-        wadoRoot: 'http://localhost:5985',
+        wadoUriRoot: DICOM_SERVER_URL,
+        qidoRoot: DICOM_SERVER_URL,
+        wadoRoot: DICOM_SERVER_URL,
         qidoSupportsIncludeField: true,
         imageRendering: 'wadouri',
         thumbnailRendering: 'wadors',
@@ -53,34 +54,6 @@ window.config = {
         omitQuotationForMultipartRequest: true,
       },
     },
-
-    // {
-    //   namespace: '@ohif/extension-default.dataSourcesModule.dicomweb',
-    //   sourceName: 'dicomweb',
-    //   configuration: {
-    //     friendlyName: 'DCM4CHEE Server',
-    //     name: 'DCM4CHEE',
-    //     wadoUriRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/wado',
-    //     qidoRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/rs',
-    //     wadoRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/rs',
-    //     qidoSupportsIncludeField: true,
-    //     imageRendering: 'wadors',
-    //     enableStudyLazyLoad: true,
-    //     thumbnailRendering: 'wadors',
-    //     requestOptions: {
-    //       auth: 'admin:admin',
-    //     },
-    //     dicomUploadEnabled: true,
-    //     singlepart: 'pdf,video',
-    //     // whether the data source should use retrieveBulkData to grab metadata,
-    //     // and in case of relative path, what would it be relative to, options
-    //     // are in the series level or study level (some servers like series some study)
-    //     bulkDataURI: {
-    //       enabled: true,
-    //     },
-    //     omitQuotationForMultipartRequest: true,
-    //   },
-    // },
     {
       namespace: '@ohif/extension-default.dataSourcesModule.dicomjson',
       sourceName: 'dicomjson',
