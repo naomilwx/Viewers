@@ -8,11 +8,11 @@
 # have this file as their .dockerignore.
 
 # Output
-dist/
-build/
+**/dist/
+**/build/
 
 # Dependencies
-node_modules/
+**/node_modules/
 
 # Root
 README.md
@@ -32,6 +32,10 @@ dockerfile
 .netlify/
 .scripts/
 .vscode/
+.docker/
 coverage/
 docs/
 testdata/
+
+platform/app/pluginConfig-original.json
+platform/app/.recipes/

@@ -1,4 +1,3 @@
-const DICOM_SERVER_URL = process.env.DICOM_SERVER_URL;
 window.config = {
   routerBasename: '/',
   customizationService: {
@@ -6,6 +5,7 @@ window.config = {
       '@ohif/extension-cornerstone.customizationModule.cornerstoneDicomUploadComponent',
   },
   showStudyList: true,
+  studyListFunctionsEnabled: true,
   extensions: [],
   modes: [],
   // below flag is for performance reasons, but it might not work for all servers
@@ -43,7 +43,7 @@ window.config = {
           requestFromBrowser: true,
         },
         enableStudyLazyLoad: true,
-        dicomUploadEnabled: true,
+        dicomUploadEnabled: false,
         singlepart: 'pdf,video',
         // whether the data source should use retrieveBulkData to grab metadata,
         // and in case of relative path, what would it be relative to, options
@@ -70,5 +70,15 @@ window.config = {
       },
     },
   ],
-  studyListFunctionsEnabled: true,
+  oidc: [
+    {
+      // ~ REQUIRED
+      // Authorization Server URL
+      authority: OHIF_OIDC_AUTHORITY,
+      client_id: OHIF_OAUTH_CLIENT_ID,
+      redirect_uri: OHIF_REDIRECT_URL,
+      response_type: 'code',
+      scope: 'openid', // email profile openid
+    },
+  ],
 };

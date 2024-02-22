@@ -28,11 +28,6 @@
       "version": "3.0.0"
     },
     {
-      "packageName": "@ohif/extension-dicom-microscopy",
-      "default": false,
-      "version": "3.0.0"
-    },
-    {
       "packageName": "@ohif/extension-dicom-pdf",
       "default": false,
       "version": "3.0.0"
@@ -44,11 +39,6 @@
     },
     {
       "packageName": "@ohif/extension-tmtv",
-      "default": false,
-      "version": "3.0.0"
-    },
-    {
-      "packageName": "@ohif/extension-test",
       "default": false,
       "version": "3.0.0"
     },
@@ -73,11 +63,6 @@
     },
     {
       "packageName": "@ohif/mode-preclinical-4d"
-    },
-    {
-      "packageName": "@ohif/mode-test",
-      "default": false,
-      "version": "3.0.0"
     },
     {
       "packageName": "@ohif/mode-basic-dev-mode",
