@@ -1,3 +1,4 @@
+const DICOM_SERVER_URL = 'http://localhost:5985';
 window.config = {
   routerBasename: '/',
   customizationService: {
@@ -16,9 +17,9 @@ window.config = {
   dataSources: [
     {
       name: 'dicomweb_server',
-      wadoUriRoot: 'http://localhost:5985',
-      qidoRoot: 'http://localhost:5985',
-      wadoRoot: 'http://localhost:5985',
+      wadoUriRoot: DICOM_SERVER_URL,
+      qidoRoot: DICOM_SERVER_URL,
+      wadoRoot: DICOM_SERVER_URL,
       qidoSupportsIncludeField: true,
       imageRendering: 'wadouri',
       thumbnailRendering: 'wadors',
@@ -32,9 +33,9 @@ window.config = {
       configuration: {
         friendlyName: 'DCM4CHEE Server',
         name: 'dicomweb_server',
-        wadoUriRoot: 'http://localhost:5985',
-        qidoRoot: 'http://localhost:5985',
-        wadoRoot: 'http://localhost:5985',
+        wadoUriRoot: DICOM_SERVER_URL,
+        qidoRoot: DICOM_SERVER_URL,
+        wadoRoot: DICOM_SERVER_URL,
         qidoSupportsIncludeField: true,
         imageRendering: 'wadouri',
         thumbnailRendering: 'wadors',
@@ -42,7 +43,7 @@ window.config = {
           requestFromBrowser: true,
         },
         enableStudyLazyLoad: true,
-        dicomUploadEnabled: true,
+        dicomUploadEnabled: false,
         singlepart: 'pdf,video',
         // whether the data source should use retrieveBulkData to grab metadata,
         // and in case of relative path, what would it be relative to, options
@@ -53,34 +54,6 @@ window.config = {
         omitQuotationForMultipartRequest: true,
       },
     },
-
-    // {
-    //   namespace: '@ohif/extension-default.dataSourcesModule.dicomweb',
-    //   sourceName: 'dicomweb',
-    //   configuration: {
-    //     friendlyName: 'DCM4CHEE Server',
-    //     name: 'DCM4CHEE',
-    //     wadoUriRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/wado',
-    //     qidoRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/rs',
-    //     wadoRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/rs',
-    //     qidoSupportsIncludeField: true,
-    //     imageRendering: 'wadors',
-    //     enableStudyLazyLoad: true,
-    //     thumbnailRendering: 'wadors',
-    //     requestOptions: {
-    //       auth: 'admin:admin',
-    //     },
-    //     dicomUploadEnabled: true,
-    //     singlepart: 'pdf,video',
-    //     // whether the data source should use retrieveBulkData to grab metadata,
-    //     // and in case of relative path, what would it be relative to, options
-    //     // are in the series level or study level (some servers like series some study)
-    //     bulkDataURI: {
-    //       enabled: true,
-    //     },
-    //     omitQuotationForMultipartRequest: true,
-    //   },
-    // },
     {
       namespace: '@ohif/extension-default.dataSourcesModule.dicomjson',
       sourceName: 'dicomjson',
@@ -98,4 +71,19 @@ window.config = {
     },
   ],
   studyListFunctionsEnabled: true,
+  oidc: [
+    {
+      // ~ REQUIRED
+      // Authorization Server URL
+      // authority: 'http://localhost/auth/realms/ohif',
+      authority: 'http://localhost:8080/auth/realms/ohif',
+      client_id: 'c664d865-9373-4ebb-822a-d739ff0bd858',
+      // redirect_uri: 'http://localhost/callback',
+      redirect_uri: 'http://localhost:3000/callback',
+      // "Authorization Code Flow"
+      // Resource: https://medium.com/@darutk/diagrams-of-all-the-openid-connect-flows-6968e3990660
+      response_type: 'code',
+      scope: 'openid', // email profile openid
+    },
+  ],
 };
