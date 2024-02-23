@@ -75,11 +75,11 @@ window.config = {
     {
       // ~ REQUIRED
       // Authorization Server URL
-      // authority: 'http://localhost/auth/realms/ohif',
-      authority: 'http://localhost:8080/auth/realms/ohif',
+      authority: 'http://localhost/auth/realms/ohif',
+      // authority: 'http://localhost:8080/realms/ohif',
       client_id: 'c664d865-9373-4ebb-822a-d739ff0bd858',
-      // redirect_uri: 'http://localhost/callback',
-      redirect_uri: 'http://localhost:3000/callback',
+      redirect_uri: 'http://localhost/callback',
+      // redirect_uri: 'http://localhost:3000/callback',
       // "Authorization Code Flow"
       // Resource: https://medium.com/@darutk/diagrams-of-all-the-openid-connect-flows-6968e3990660
       response_type: 'code',
