@@ -1,16 +1,16 @@
-import { UserManager } from 'oidc-client';
+import { UserManager } from 'oidc-client-ts';
 
 /**
  * Creates a userManager from oidcSettings
  * LINK: https://github.com/IdentityModel/oidc-client-js/wiki#configuration
  *
  * @param {Object} oidcSettings
- * @param {string} oidcSettings.authServerUrl,
- * @param {string} oidcSettings.clientId,
- * @param {string} oidcSettings.authRedirectUri,
- * @param {string} oidcSettings.postLogoutRedirectUri,
+ * @param {string} oidcSettings.authority,
+ * @param {string} oidcSettings.client_id,
+ * @param {string} oidcSettings.redirect_uri,
+ * @param {string} oidcSettings.post_logout_redirect_uri,
  * @param {string} oidcSettings.responseType,
- * @param {string} oidcSettings.extraQueryParams,
+ * @param {Record<string, string | number | boolean>} oidcSettings.extraQueryParams,
  */
 export default function getUserManagerForOpenIdConnectClient(oidcSettings) {
   if (!oidcSettings) {
@@ -20,7 +20,7 @@ export default function getUserManagerForOpenIdConnectClient(oidcSettings) {
   const settings = {
     ...oidcSettings,
     automaticSilentRenew: true,
-    revokeAccessTokenOnSignout: true,
+    revokeTokensOnSignout: true,
     filterProtocolClaims: true,
     loadUserInfo: true,
   };

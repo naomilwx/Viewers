@@ -34,7 +34,7 @@ const initUserManager = (oidc, routerBasename) => {
   const baseUri = `${protocol}//${host}${routerBasename}`;
 
   const redirect_uri = firstOpenIdClient.redirect_uri || '/callback';
-  const silent_redirect_uri = firstOpenIdClient.silent_redirect_uri || '/silent-refresh.html';
+  const silent_redirect_uri = firstOpenIdClient.silent_redirect_uri || '/silent-refresh';
   const post_logout_redirect_uri = firstOpenIdClient.post_logout_redirect_uri || '/';
 
   const openIdConnectConfiguration = Object.assign({}, firstOpenIdClient, {
@@ -147,12 +147,12 @@ function OpenIdConnectRoutes({ oidc, routerBasename, userAuthenticationService }
   const location = useLocation();
   const { pathname, search } = location;
 
-  const redirect_uri = new URL(userManager.settings._redirect_uri).pathname.replace(
+  const redirect_uri = new URL(userManager.settings.redirect_uri).pathname.replace(
     routerBasename !== '/' ? routerBasename : '',
     ''
   );
-  const silent_refresh_uri = new URL(userManager.settings._silent_redirect_uri).pathname; //.replace(routerBasename,'')
-  const post_logout_redirect_uri = new URL(userManager.settings._post_logout_redirect_uri).pathname; //.replace(routerBasename,'');
+  const silent_refresh_uri = new URL(userManager.settings.silent_redirect_uri).pathname; //.replace(routerBasename,'')
+  const post_logout_redirect_uri = new URL(userManager.settings.post_logout_redirect_uri).pathname; //.replace(routerBasename,'');
 
   // const pathnameRelative = pathname.replace(routerBasename,'');
 
