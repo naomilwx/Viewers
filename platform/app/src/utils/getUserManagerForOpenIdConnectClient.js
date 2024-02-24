@@ -24,7 +24,7 @@ export default function getUserManagerForOpenIdConnectClient(oidcSettings) {
     filterProtocolClaims: true,
     loadUserInfo: true,
   };
-
+  // TODO: check if token refresh is an issue: https://github.com/OHIF/Viewers/issues/2896
   const userManager = new UserManager(settings);
 
   return userManager;

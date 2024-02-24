@@ -193,10 +193,12 @@ function WorkList({
       skipEmptyString: true,
     });
 
+    console.log('search', search, debouncedFilterValues);
     navigate({
       pathname: '/',
-      search: search ? `?${search}` : undefined,
+      search,
     });
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedFilterValues]);
 
@@ -206,7 +208,10 @@ function WorkList({
       try {
         const series = await dataSource.query.series.search(studyInstanceUid);
         seriesInStudiesMap.set(studyInstanceUid, sortBySeriesDate(series));
-        setStudiesWithSeriesData([...studiesWithSeriesData, studyInstanceUid]);
+        setStudiesWithSeriesData(studiesWithSeriesData => [
+          ...studiesWithSeriesData,
+          studyInstanceUid,
+        ]);
       } catch (ex) {
         // TODO: UI Notification Service
         console.warn(ex);
@@ -254,11 +259,13 @@ function WorkList({
     const studyDate =
       date &&
       moment(date, ['YYYYMMDD', 'YYYY.MM.DD'], true).isValid() &&
-      moment(date, ['YYYYMMDD', 'YYYY.MM.DD']).format(t('Common:localDateFormat','MMM-DD-YYYY'));
+      moment(date, ['YYYYMMDD', 'YYYY.MM.DD']).format(t('Common:localDateFormat', 'MMM-DD-YYYY'));
     const studyTime =
       time &&
       moment(time, ['HH', 'HHmm', 'HHmmss', 'HHmmss.SSS']).isValid() &&
-      moment(time, ['HH', 'HHmm', 'HHmmss', 'HHmmss.SSS']).format(t('Common:localTimeFormat', 'hh:mm A'));
+      moment(time, ['HH', 'HHmm', 'HHmmss', 'HHmmss.SSS']).format(
+        t('Common:localTimeFormat', 'hh:mm A')
+      );
 
     return {
       dataCY: `studyRow-${studyInstanceUid}`,

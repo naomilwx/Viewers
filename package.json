@@ -61,6 +61,7 @@
     "@babel/runtime": "^7.20.13",
     "@kitware/vtk.js": "29.7.0",
     "core-js": "^3.2.1",
+    "http-proxy-middleware": "^2.0.6",
     "oidc-client-ts": "^3.0.1"
   },
   "peerDependencies": {

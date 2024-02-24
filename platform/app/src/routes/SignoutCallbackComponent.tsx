@@ -8,7 +8,7 @@ function SignoutCallbackComponent({ userManager }) {
   const onRedirectSuccess = (/* user */) => {
     const { pathname, search = '' } = JSON.parse(sessionStorage.getItem('ohif-redirect-to'));
 
-    navigate(`${pathname}?${search}`);
+    navigate({ pathname, search });
   };
 
   const onRedirectError = error => {

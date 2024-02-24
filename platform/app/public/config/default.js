@@ -1,3 +1,4 @@
+const DICOM_SERVER_URL = 'http://localhost/dicomweb';
 window.config = {
   routerBasename: '/',
   // whiteLabeling: {},
@@ -38,9 +39,9 @@ window.config = {
       configuration: {
         friendlyName: 'AWS S3 Static wado server',
         name: 'aws',
-        wadoUriRoot: 'https://d33do7qe4w26qo.cloudfront.net/dicomweb',
-        qidoRoot: 'https://d33do7qe4w26qo.cloudfront.net/dicomweb',
-        wadoRoot: 'https://d33do7qe4w26qo.cloudfront.net/dicomweb',
+        wadoUriRoot: DICOM_SERVER_URL,
+        qidoRoot: DICOM_SERVER_URL,
+        wadoRoot: DICOM_SERVER_URL,
         qidoSupportsIncludeField: false,
         imageRendering: 'wadors',
         thumbnailRendering: 'wadors',
@@ -230,4 +231,19 @@ window.config = {
       keys: ['9'],
     },
   ],
+  // oidc: [
+  //   {
+  //     // ~ REQUIRED
+  //     // Authorization Server URL
+  //     authority: 'http://localhost/auth/realms/ohif',
+  //     // authority: 'http://localhost:8080/realms/ohif',
+  //     client_id: 'c664d865-9373-4ebb-822a-d739ff0bd858',
+  //     redirect_uri: 'http://localhost/callback',
+  //     // redirect_uri: 'http://localhost:3000/callback',
+  //     // "Authorization Code Flow"
+  //     // Resource: https://medium.com/@darutk/diagrams-of-all-the-openid-connect-flows-6968e3990660
+  //     response_type: 'code',
+  //     scope: 'openid', // email profile openid
+  //   },
+  // ],
 };
