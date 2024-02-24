@@ -124,6 +124,7 @@ function DataSourceWrapper(props) {
 
   useEffect(() => {
     const dataSourceChangedCallback = () => {
+      console.log('datasource changed', extensionManager.getActiveDataSource());
       setIsLoading(false);
       setIsDataSourceInitialized(false);
       setDataSourcePath('');
@@ -148,6 +149,7 @@ function DataSourceWrapper(props) {
 
     // 204: no content
     async function getData() {
+      // console.log('fetching', queryFilterValues, location);
       setIsLoading(true);
       log.time(Enums.TimingEnum.SEARCH_TO_LIST);
       const studies = await dataSource.query.studies.search(queryFilterValues);
@@ -159,6 +161,7 @@ function DataSourceWrapper(props) {
         pageNumber: queryFilterValues.pageNumber,
         location,
       });
+      console.log('retrieved', studies);
       log.timeEnd(Enums.TimingEnum.SCRIPT_TO_VIEW);
       log.timeEnd(Enums.TimingEnum.SEARCH_TO_LIST);
 

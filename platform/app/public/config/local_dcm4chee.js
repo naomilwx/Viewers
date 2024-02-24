@@ -1,4 +1,7 @@
-const DICOM_SERVER_URL = 'http://localhost:5985';
+// const DICOM_SERVER_URL = 'http://localhost:5985';
+const DICOM_SERVER_URL = 'http://localhost/dicom-api';
+// const DICOM_SERVER_URL = 'http://localhost/dicomweb';
+// const DICOM_SERVER_URL = 'https://d33do7qe4w26qo.cloudfront.net/dicomweb';
 window.config = {
   routerBasename: '/',
   customizationService: {

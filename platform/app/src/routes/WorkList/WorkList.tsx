@@ -200,10 +200,12 @@ function WorkList({
       skipEmptyString: true,
     });
 
+    console.log('search', search, debouncedFilterValues);
     navigate({
       pathname: '/',
-      search: search ? `?${search}` : undefined,
+      search,
     });
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedFilterValues]);
 
@@ -213,7 +215,10 @@ function WorkList({
       try {
         const series = await dataSource.query.series.search(studyInstanceUid);
         seriesInStudiesMap.set(studyInstanceUid, sortBySeriesDate(series));
-        setStudiesWithSeriesData([...studiesWithSeriesData, studyInstanceUid]);
+        setStudiesWithSeriesData(studiesWithSeriesData => [
+          ...studiesWithSeriesData,
+          studyInstanceUid,
+        ]);
       } catch (ex) {
         // TODO: UI Notification Service
         console.warn(ex);
