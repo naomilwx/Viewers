@@ -46,6 +46,20 @@ const initUserManager = (oidc, routerBasename) => {
   return getUserManagerForOpenIdConnectClient(openIdConnectConfiguration);
 };
 
+export function LocationChangeHook(props) {
+  const { redirect_uri } = props;
+  const location = useLocation();
+
+  useEffect(() => {
+    const { pathname, search } = location;
+    if (pathname !== redirect_uri) {
+      sessionStorage.setItem('ohif-redirect-to', JSON.stringify({ pathname, search }));
+    }
+  }, [location])
+
+  return <div />;
+}
+
 function LogoutComponent(props) {
   const { userManager } = props;
   localStorage.setItem('signoutEvent', 'true');
@@ -108,6 +122,15 @@ function OpenIdConnectRoutes({ oidc, routerBasename, userAuthenticationService }
   };
 
   const handleUnauthenticated = async () => {
+    const location = useLocation();
+    useEffect(() => {
+      const { pathname, search } = location;
+      // console.log(pathname, search);
+      if (pathname !== redirect_uri) {
+        sessionStorage.setItem('ohif-redirect-to', JSON.stringify({ pathname, search }));
+      }
+    }, [location])
+
     await userManager.signinRedirect();
 
     // return null because this is used in a react component
@@ -144,9 +167,6 @@ function OpenIdConnectRoutes({ oidc, routerBasename, userAuthenticationService }
 
   const oidcAuthority = oidc[0].authority;
 
-  const location = useLocation();
-  const { pathname, search } = location;
-
   const redirect_uri = new URL(userManager.settings.redirect_uri).pathname.replace(
     routerBasename !== '/' ? routerBasename : '',
     ''
@@ -155,10 +175,6 @@ function OpenIdConnectRoutes({ oidc, routerBasename, userAuthenticationService }
   const post_logout_redirect_uri = new URL(userManager.settings.post_logout_redirect_uri).pathname; //.replace(routerBasename,'');
 
   // const pathnameRelative = pathname.replace(routerBasename,'');
-
-  if (pathname !== redirect_uri) {
-    sessionStorage.setItem('ohif-redirect-to', JSON.stringify({ pathname, search }));
-  }
 
   return (
     <Routes>
@@ -185,16 +201,18 @@ function OpenIdConnectRoutes({ oidc, routerBasename, userAuthenticationService }
           <CallbackPage
             userManager={userManager}
             onRedirectSuccess={user => {
-              const { pathname, search = '' } = JSON.parse(
-                sessionStorage.getItem('ohif-redirect-to')
-              );
-
               userAuthenticationService.setUser(user);
 
-              navigate({
-                pathname,
-                search,
-              });
+              const saved = sessionStorage.getItem('ohif-redirect-to');
+              if (saved) {
+                const { pathname = '/', search = '' } = JSON.parse(saved);
+                navigate({
+                  pathname,
+                  search,
+                });
+              } else {
+                navigate('/');
+              }
             }}
           />
         }

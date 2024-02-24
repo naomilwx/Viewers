@@ -22,7 +22,7 @@ import {
 import { AppConfigProvider } from '@state';
 import createRoutes from './routes';
 import appInit from './appInit.js';
-import OpenIdConnectRoutes from './utils/OpenIdConnectRoutes';
+import OpenIdConnectRoutes, { LocationChangeHook } from './utils/OpenIdConnectRoutes';
 
 let commandsManager: CommandsManager,
   extensionManager: ExtensionManager,
@@ -78,8 +78,6 @@ function App({ config, defaultExtensions, defaultModes }) {
   ];
   const CombinedProviders = ({ children }) => Compose({ components: providers, children });
 
-  let authRoutes = null;
-
   // Should there be a generic call to init on the extension manager?
   customizationService.init(extensionManager);
 
@@ -95,20 +93,17 @@ function App({ config, defaultExtensions, defaultModes }) {
     showStudyList,
   });
 
-  if (oidc) {
-    authRoutes = (
-      <OpenIdConnectRoutes
-        oidc={oidc}
-        routerBasename={routerBasename}
-        userAuthenticationService={userAuthenticationService}
-      />
-    );
-  }
-
   return (
     <CombinedProviders>
       <BrowserRouter basename={routerBasename}>
-        {authRoutes}
+        {oidc ?
+        (
+          <OpenIdConnectRoutes
+            oidc={oidc}
+            routerBasename={routerBasename}
+            userAuthenticationService={userAuthenticationService}
+          />
+        ): null}
         {appRoutes}
       </BrowserRouter>
     </CombinedProviders>

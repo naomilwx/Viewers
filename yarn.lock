@@ -1454,10 +1454,17 @@
     core-js-pure "^3.30.2"
     regenerator-runtime "^0.14.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.6", "@babel/runtime@^7.20.13", "@babel/runtime@^7.20.6", "@babel/runtime@^7.23.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2", "@babel/runtime@7.22.11":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.6", "@babel/runtime@^7.20.13", "@babel/runtime@^7.20.6", "@babel/runtime@^7.23.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.23.8"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.23.8.tgz"
   integrity sha512-Y7KbAP984rn1VGMbGqKmBLio9V7y5Je9GvU4rQPCPinCyNfUcToxIXl06d59URp/F3LwinvODxab5N/G6qggkw==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
+"@babel/runtime@7.22.11":
+  version "7.22.11"
+  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.22.11.tgz"
+  integrity sha512-ee7jVNlWN09+KftVOu9n7S8gQzD/Z6hN/I8VBRXW4P1+Xe7kJGXMwu8vds4aGIMHZnNbdpSWCfZZtinytpcAvA==
   dependencies:
     regenerator-runtime "^0.14.0"
 
@@ -1512,7 +1519,7 @@
 
 "@cornerstonejs/adapters@^1.63.4":
   version "1.63.4"
-  resolved "https://registry.yarnpkg.com/@cornerstonejs/adapters/-/adapters-1.63.4.tgz#c43fcbb5217d09a4aaa3ecdbd5feb58d1283f486"
+  resolved "https://registry.npmjs.org/@cornerstonejs/adapters/-/adapters-1.63.4.tgz"
   integrity sha512-HC1OGFEbveAd+Bs7UHDVBSK1XL187EsJqXkuDe5A1tlCUKoA2MCW/lX1sraW/0Z6Gm9GVzGnkVtRMBxYd96ENg==
   dependencies:
     "@babel/runtime-corejs2" "^7.17.8"
@@ -1564,7 +1571,7 @@
 
 "@cornerstonejs/core@^1.63.4":
   version "1.63.4"
-  resolved "https://registry.yarnpkg.com/@cornerstonejs/core/-/core-1.63.4.tgz#0d324e0df130854d0f6c24137b8e60053e0af3b4"
+  resolved "https://registry.npmjs.org/@cornerstonejs/core/-/core-1.63.4.tgz"
   integrity sha512-l/7u1THn2pYq97QMBm8uy/kQWUEIlbq7rzdP6u1lSs8yDqK/f6zSQjNrvB/D6vRiVKnHVIlByxbbmEY46JQHmQ==
   dependencies:
     "@kitware/vtk.js" "29.7.0"
@@ -1575,7 +1582,7 @@
 
 "@cornerstonejs/dicom-image-loader@^1.63.4":
   version "1.63.4"
-  resolved "https://registry.yarnpkg.com/@cornerstonejs/dicom-image-loader/-/dicom-image-loader-1.63.4.tgz#6827cb9d3d840dcd6a798e884a169adcc6bba311"
+  resolved "https://registry.npmjs.org/@cornerstonejs/dicom-image-loader/-/dicom-image-loader-1.63.4.tgz"
   integrity sha512-agnRjhIBFiYQ6gQTjHmio+DG79OTaNXU3NbEVVxWdahqR1MnJBX39FT+1mi+8AhbN9sH2f+IpB4MoqraNFetLw==
   dependencies:
     "@cornerstonejs/codec-charls" "^1.2.3"
@@ -1589,7 +1596,7 @@
 
 "@cornerstonejs/streaming-image-volume-loader@^1.63.4":
   version "1.63.4"
-  resolved "https://registry.yarnpkg.com/@cornerstonejs/streaming-image-volume-loader/-/streaming-image-volume-loader-1.63.4.tgz#37ba9de488d5472c3dd98f85698a854c97b4b29f"
+  resolved "https://registry.npmjs.org/@cornerstonejs/streaming-image-volume-loader/-/streaming-image-volume-loader-1.63.4.tgz"
   integrity sha512-GoxxmQVeHVZntFFwVwOp/fttgTrzXBwH08gk6JDjhHhmh22Ci7P137hG8o54uA6dv0/W572em60SrIzvjB4Xwg==
   dependencies:
     "@cornerstonejs/core" "^1.63.4"
@@ -1597,7 +1604,7 @@
 
 "@cornerstonejs/tools@^1.63.4":
   version "1.63.4"
-  resolved "https://registry.yarnpkg.com/@cornerstonejs/tools/-/tools-1.63.4.tgz#4f85cf77bda97738ff05ef9184cf68e617f1631c"
+  resolved "https://registry.npmjs.org/@cornerstonejs/tools/-/tools-1.63.4.tgz"
   integrity sha512-LDoqShwi0b6kEGqnfY3pUrK4nExS9lqhXFvWew6wH9znUyEIVhGexBXNYDb3E2Gy13d4drtjsM+PXFt7c0PecQ==
   dependencies:
     "@cornerstonejs/core" "^1.63.4"
@@ -2468,7 +2475,7 @@
 
 "@icr/polyseg-wasm@0.4.0":
   version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@icr/polyseg-wasm/-/polyseg-wasm-0.4.0.tgz#755e23d07c3d8d8fca1113278c803c1ef0185da0"
+  resolved "https://registry.npmjs.org/@icr/polyseg-wasm/-/polyseg-wasm-0.4.0.tgz"
   integrity sha512-3sZmiwG8I0NaqPle0L7+V/ZexiR7IjIUFkUsaOoFI9rNuBGyyMMmxAxnCmqcDFtBDk9h+JEYJf6e3NnqlHi/HQ==
 
 "@isaacs/cliui@^8.0.2":
@@ -2743,7 +2750,7 @@
 
 "@kitware/vtk.js@29.7.0":
   version "29.7.0"
-  resolved "https://registry.yarnpkg.com/@kitware/vtk.js/-/vtk.js-29.7.0.tgz#56c352a755dd61bf34664866441ef9143e55a24d"
+  resolved "https://registry.npmjs.org/@kitware/vtk.js/-/vtk.js-29.7.0.tgz"
   integrity sha512-z6XcoB+uUKayOsfLFR6GJW59bUyDe8JLkw3AMWKHbdLQmWvGosl32Zq18TYwCWAH/epIjZBoLBV+8o2GjgCb0w==
   dependencies:
     "@babel/runtime" "7.22.11"
@@ -3190,7 +3197,7 @@
     "@octokit/openapi-types" "^18.0.0"
 
 "@ohif/app@file:/Users/naomileow/Documents/work/OHIF-Viewers/platform/app":
-  version "3.8.0-beta.55"
+  version "3.8.0-beta.56"
   resolved "file:platform/app"
   dependencies:
     "@babel/runtime" "^7.20.13"
@@ -3198,21 +3205,21 @@
     "@cornerstonejs/codec-libjpeg-turbo-8bit" "^1.2.2"
     "@cornerstonejs/codec-openjpeg" "^1.2.2"
     "@cornerstonejs/codec-openjph" "^2.4.5"
-    "@cornerstonejs/dicom-image-loader" "^1.44.1"
+    "@cornerstonejs/dicom-image-loader" "^1.63.4"
     "@emotion/serialize" "^1.1.3"
-    "@ohif/core" "3.8.0-beta.55"
-    "@ohif/extension-cornerstone" "3.8.0-beta.55"
-    "@ohif/extension-cornerstone-dicom-rt" "3.8.0-beta.55"
-    "@ohif/extension-cornerstone-dicom-seg" "3.8.0-beta.55"
-    "@ohif/extension-cornerstone-dicom-sr" "3.8.0-beta.55"
-    "@ohif/extension-default" "3.8.0-beta.55"
-    "@ohif/extension-dicom-pdf" "3.8.0-beta.55"
-    "@ohif/extension-dicom-video" "3.8.0-beta.55"
-    "@ohif/extension-test" "3.8.0-beta.55"
-    "@ohif/i18n" "3.8.0-beta.55"
-    "@ohif/mode-basic-dev-mode" "3.8.0-beta.55"
-    "@ohif/mode-longitudinal" "3.8.0-beta.55"
-    "@ohif/ui" "3.8.0-beta.55"
+    "@ohif/core" "3.8.0-beta.56"
+    "@ohif/extension-cornerstone" "3.8.0-beta.56"
+    "@ohif/extension-cornerstone-dicom-rt" "3.8.0-beta.56"
+    "@ohif/extension-cornerstone-dicom-seg" "3.8.0-beta.56"
+    "@ohif/extension-cornerstone-dicom-sr" "3.8.0-beta.56"
+    "@ohif/extension-default" "3.8.0-beta.56"
+    "@ohif/extension-dicom-pdf" "3.8.0-beta.56"
+    "@ohif/extension-dicom-video" "3.8.0-beta.56"
+    "@ohif/extension-test" "3.8.0-beta.56"
+    "@ohif/i18n" "3.8.0-beta.56"
+    "@ohif/mode-basic-dev-mode" "3.8.0-beta.56"
+    "@ohif/mode-longitudinal" "3.8.0-beta.56"
+    "@ohif/ui" "3.8.0-beta.56"
     "@types/react" "^17.0.38"
     classnames "^2.3.2"
     core-js "^3.16.1"
@@ -3237,7 +3244,7 @@
     react-router-dom "^6.8.1"
 
 "@ohif/cli@file:/Users/naomileow/Documents/work/OHIF-Viewers/platform/cli":
-  version "3.8.0-beta.55"
+  version "3.8.0-beta.56"
   resolved "file:platform/cli"
   dependencies:
     "@babel/core" "^7.23.2"
@@ -3256,8 +3263,8 @@
     util "^0.12.4"
     yarn-programmatic "^0.1.2"
 
-"@ohif/core@3.8.0-beta.55", "@ohif/core@file:/Users/naomileow/Documents/work/OHIF-Viewers/platform/core":
-  version "3.8.0-beta.55"
+"@ohif/core@3.8.0-beta.56", "@ohif/core@file:/Users/naomileow/Documents/work/OHIF-Viewers/platform/core":
+  version "3.8.0-beta.56"
   resolved "file:platform/core"
   dependencies:
     "@babel/runtime" "^7.20.13"
@@ -3272,58 +3279,58 @@
     query-string "^6.14.0"
     validate.js "^0.12.0"
 
-"@ohif/extension-cornerstone-dicom-rt@3.8.0-beta.55", "@ohif/extension-cornerstone-dicom-rt@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/cornerstone-dicom-rt":
-  version "3.8.0-beta.55"
+"@ohif/extension-cornerstone-dicom-rt@3.8.0-beta.56", "@ohif/extension-cornerstone-dicom-rt@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/cornerstone-dicom-rt":
+  version "3.8.0-beta.56"
   resolved "file:extensions/cornerstone-dicom-rt"
   dependencies:
     "@babel/runtime" "^7.20.13"
     react-color "^2.19.3"
 
-"@ohif/extension-cornerstone-dicom-seg@3.8.0-beta.55", "@ohif/extension-cornerstone-dicom-seg@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/cornerstone-dicom-seg":
-  version "3.8.0-beta.55"
+"@ohif/extension-cornerstone-dicom-seg@3.8.0-beta.56", "@ohif/extension-cornerstone-dicom-seg@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/cornerstone-dicom-seg":
+  version "3.8.0-beta.56"
   resolved "file:extensions/cornerstone-dicom-seg"
   dependencies:
     "@babel/runtime" "^7.20.13"
-    "@cornerstonejs/adapters" "^1.44.1"
-    "@cornerstonejs/tools" "^1.44.1"
-    "@kitware/vtk.js" "29.3.0"
+    "@cornerstonejs/adapters" "^1.63.4"
+    "@cornerstonejs/core" "^1.63.4"
+    "@kitware/vtk.js" "29.7.0"
     react-color "^2.19.3"
 
-"@ohif/extension-cornerstone-dicom-sr@3.8.0-beta.55", "@ohif/extension-cornerstone-dicom-sr@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/cornerstone-dicom-sr":
-  version "3.8.0-beta.55"
+"@ohif/extension-cornerstone-dicom-sr@3.8.0-beta.56", "@ohif/extension-cornerstone-dicom-sr@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/cornerstone-dicom-sr":
+  version "3.8.0-beta.56"
   resolved "file:extensions/cornerstone-dicom-sr"
   dependencies:
     "@babel/runtime" "^7.20.13"
-    "@cornerstonejs/adapters" "^1.44.1"
-    "@cornerstonejs/core" "^1.44.1"
-    "@cornerstonejs/tools" "^1.44.1"
+    "@cornerstonejs/adapters" "^1.63.4"
+    "@cornerstonejs/core" "^1.63.4"
+    "@cornerstonejs/tools" "^1.63.4"
     classnames "^2.3.2"
 
-"@ohif/extension-cornerstone@3.8.0-beta.55", "@ohif/extension-cornerstone@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/cornerstone":
-  version "3.8.0-beta.55"
+"@ohif/extension-cornerstone@3.8.0-beta.56", "@ohif/extension-cornerstone@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/cornerstone":
+  version "3.8.0-beta.56"
   resolved "file:extensions/cornerstone"
   dependencies:
     "@babel/runtime" "^7.20.13"
-    "@cornerstonejs/adapters" "^1.44.1"
-    "@cornerstonejs/core" "^1.44.1"
-    "@cornerstonejs/streaming-image-volume-loader" "^1.44.1"
-    "@cornerstonejs/tools" "^1.44.1"
-    "@kitware/vtk.js" "29.3.01"
+    "@cornerstonejs/adapters" "^1.63.4"
+    "@cornerstonejs/core" "^1.63.4"
+    "@cornerstonejs/streaming-image-volume-loader" "^1.63.4"
+    "@cornerstonejs/tools" "^1.63.4"
+    "@kitware/vtk.js" "29.7.0"
     html2canvas "^1.4.1"
     lodash.debounce "4.0.8"
     lodash.merge "^4.6.2"
     shader-loader "^1.3.1"
     worker-loader "^3.0.8"
 
-"@ohif/extension-default@3.8.0-beta.55", "@ohif/extension-default@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/default":
-  version "3.8.0-beta.55"
+"@ohif/extension-default@3.8.0-beta.56", "@ohif/extension-default@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/default":
+  version "3.8.0-beta.56"
   resolved "file:extensions/default"
   dependencies:
     "@babel/runtime" "^7.20.13"
     "@cornerstonejs/calculate-suv" "^1.1.0"
 
 "@ohif/extension-dicom-microscopy@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/dicom-microscopy":
-  version "3.8.0-beta.55"
+  version "3.8.0-beta.56"
   resolved "file:extensions/dicom-microscopy"
   dependencies:
     "@babel/runtime" "^7.20.13"
@@ -3334,45 +3341,45 @@
     dicom-microscopy-viewer "^0.44.0"
     dicomicc "^0.1"
 
-"@ohif/extension-dicom-pdf@3.8.0-beta.55", "@ohif/extension-dicom-pdf@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/dicom-pdf":
-  version "3.8.0-beta.55"
+"@ohif/extension-dicom-pdf@3.8.0-beta.56", "@ohif/extension-dicom-pdf@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/dicom-pdf":
+  version "3.8.0-beta.56"
   resolved "file:extensions/dicom-pdf"
   dependencies:
     "@babel/runtime" "^7.20.13"
     classnames "^2.3.2"
 
-"@ohif/extension-dicom-video@3.8.0-beta.55", "@ohif/extension-dicom-video@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/dicom-video":
-  version "3.8.0-beta.55"
+"@ohif/extension-dicom-video@3.8.0-beta.56", "@ohif/extension-dicom-video@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/dicom-video":
+  version "3.8.0-beta.56"
   resolved "file:extensions/dicom-video"
   dependencies:
     "@babel/runtime" "^7.20.13"
     classnames "^2.3.2"
 
 "@ohif/extension-measurement-tracking@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/measurement-tracking":
-  version "3.8.0-beta.55"
+  version "3.8.0-beta.56"
   resolved "file:extensions/measurement-tracking"
   dependencies:
     "@babel/runtime" "^7.20.13"
-    "@ohif/ui" "3.8.0-beta.55"
+    "@ohif/ui" "3.8.0-beta.56"
     "@xstate/react" "^3.2.2"
     xstate "^4.10.0"
 
-"@ohif/extension-test@3.8.0-beta.55", "@ohif/extension-test@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/test-extension":
-  version "3.8.0-beta.55"
+"@ohif/extension-test@3.8.0-beta.56", "@ohif/extension-test@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/test-extension":
+  version "3.8.0-beta.56"
   resolved "file:extensions/test-extension"
   dependencies:
     "@babel/runtime" "^7.20.13"
     classnames "^2.3.2"
 
 "@ohif/extension-tmtv@file:/Users/naomileow/Documents/work/OHIF-Viewers/extensions/tmtv":
-  version "3.8.0-beta.55"
+  version "3.8.0-beta.56"
   resolved "file:extensions/tmtv"
   dependencies:
     "@babel/runtime" "^7.20.13"
     classnames "^2.3.2"
 
-"@ohif/i18n@3.8.0-beta.55", "@ohif/i18n@file:/Users/naomileow/Documents/work/OHIF-Viewers/platform/i18n":
-  version "3.8.0-beta.55"
+"@ohif/i18n@3.8.0-beta.56", "@ohif/i18n@file:/Users/naomileow/Documents/work/OHIF-Viewers/platform/i18n":
+  version "3.8.0-beta.56"
   resolved "file:platform/i18n"
   dependencies:
     "@babel/runtime" "^7.20.13"
@@ -3380,50 +3387,50 @@
     locize-editor "^2.0.0"
     locize-lastused "^1.1.0"
 
-"@ohif/mode-basic-dev-mode@3.8.0-beta.55", "@ohif/mode-basic-dev-mode@file:/Users/naomileow/Documents/work/OHIF-Viewers/modes/basic-dev-mode":
-  version "3.8.0-beta.55"
+"@ohif/mode-basic-dev-mode@3.8.0-beta.56", "@ohif/mode-basic-dev-mode@file:/Users/naomileow/Documents/work/OHIF-Viewers/modes/basic-dev-mode":
+  version "3.8.0-beta.56"
   resolved "file:modes/basic-dev-mode"
   dependencies:
     "@babel/runtime" "^7.20.13"
     i18next "^17.0.3"
 
-"@ohif/mode-longitudinal@3.8.0-beta.55", "@ohif/mode-longitudinal@file:/Users/naomileow/Documents/work/OHIF-Viewers/modes/longitudinal":
-  version "3.8.0-beta.55"
+"@ohif/mode-longitudinal@3.8.0-beta.56", "@ohif/mode-longitudinal@file:/Users/naomileow/Documents/work/OHIF-Viewers/modes/longitudinal":
+  version "3.8.0-beta.56"
   resolved "file:modes/longitudinal"
   dependencies:
     "@babel/runtime" "^7.20.13"
     i18next "^17.0.3"
 
 "@ohif/mode-microscopy@file:/Users/naomileow/Documents/work/OHIF-Viewers/modes/microscopy":
-  version "3.8.0-beta.55"
+  version "3.8.0-beta.56"
   resolved "file:modes/microscopy"
   dependencies:
     "@babel/runtime" "^7.20.13"
     i18next "^17.0.3"
 
 "@ohif/mode-segmentation@file:/Users/naomileow/Documents/work/OHIF-Viewers/modes/segmentation":
-  version "3.8.0-beta.55"
+  version "3.8.0-beta.56"
   resolved "file:modes/segmentation"
   dependencies:
     "@babel/runtime" "^7.20.13"
     i18next "^17.0.3"
 
 "@ohif/mode-test@file:/Users/naomileow/Documents/work/OHIF-Viewers/modes/basic-test-mode":
-  version "3.8.0-beta.55"
+  version "3.8.0-beta.56"
   resolved "file:modes/basic-test-mode"
   dependencies:
     "@babel/runtime" "^7.20.13"
     i18next "^17.0.3"
 
 "@ohif/mode-tmtv@file:/Users/naomileow/Documents/work/OHIF-Viewers/modes/tmtv":
-  version "3.8.0-beta.55"
+  version "3.8.0-beta.56"
   resolved "file:modes/tmtv"
   dependencies:
     "@babel/runtime" "^7.20.13"
     i18next "^17.0.3"
 
-"@ohif/ui@3.8.0-beta.55", "@ohif/ui@file:/Users/naomileow/Documents/work/OHIF-Viewers/platform/ui":
-  version "3.8.0-beta.55"
+"@ohif/ui@3.8.0-beta.56", "@ohif/ui@file:/Users/naomileow/Documents/work/OHIF-Viewers/platform/ui":
+  version "3.8.0-beta.56"
   resolved "file:platform/ui"
   dependencies:
     "@testing-library/react-hooks" "^3.2.1"
@@ -5004,7 +5011,7 @@
     "@types/estree" "*"
     "@types/json-schema" "*"
 
-"@types/estree@*", "@types/estree@^1.0.0":
+"@types/estree@*", "@types/estree@^1.0.5":
   version "1.0.5"
   resolved "https://registry.npmjs.org/@types/estree/-/estree-1.0.5.tgz"
   integrity sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==
@@ -5247,7 +5254,7 @@
 
 "@types/offscreencanvas@2019.7.3":
   version "2019.7.3"
-  resolved "https://registry.yarnpkg.com/@types/offscreencanvas/-/offscreencanvas-2019.7.3.tgz#90267db13f64d6e9ccb5ae3eac92786a7c77a516"
+  resolved "https://registry.npmjs.org/@types/offscreencanvas/-/offscreencanvas-2019.7.3.tgz"
   integrity sha512-ieXiYmgSRXUDeOntE1InxjWyvEelZGP63M+cGuquuRLuIKKT1osnkXjxev9B7d1nXSug5vpunx+gNlbVxMlC9A==
 
 "@types/parse-json@^4.0.0":
@@ -7119,7 +7126,7 @@ browserify-zlib@^0.1.4:
   dependencies:
     pako "~0.2.0"
 
-browserslist@^4.0.0, browserslist@^4.14.5, browserslist@^4.18.1, browserslist@^4.21.4, browserslist@^4.22.2:
+browserslist@^4.0.0, browserslist@^4.18.1, browserslist@^4.21.10, browserslist@^4.21.4, browserslist@^4.22.2:
   version "4.22.2"
   dependencies:
     caniuse-lite "^1.0.30001565"
@@ -7853,7 +7860,7 @@ commander@^2.20.0:
   resolved "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
-commander@^5.1.0, commander@^6.2.1, commander@^7.2.0, commander@^8.3.0, commander@9.2.0:
+commander@^5.1.0, commander@^6.2.1, commander@^7.2.0, commander@^8.3.0:
   version "8.3.0"
   resolved "https://registry.npmjs.org/commander/-/commander-8.3.0.tgz"
   integrity sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==
@@ -7862,6 +7869,11 @@ commander@^7.0.0:
   version "7.2.0"
   resolved "https://registry.npmjs.org/commander/-/commander-7.2.0.tgz"
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
+
+commander@9.2.0:
+  version "9.2.0"
+  resolved "https://registry.npmjs.org/commander/-/commander-9.2.0.tgz"
+  integrity sha512-e2i4wANQiSXgnrBlIatyHtP1odfUp0BbV5Y5nEGbxtIrStkEOAAzCUirvLBNXHLr7kwLvJl6V+4V3XV9x7Wd9w==
 
 common-path-prefix@^3.0.0:
   version "3.0.0"
@@ -12445,9 +12457,9 @@ iota-array@^1.0.0:
   integrity sha512-pZ2xT+LOHckCatGQ3DcG/a+QuEqvoxqkiL7tvE8nn3uuu+f6i1TtpB5/FtWFbxUuVr5PZCx8KskuGatbJDXOWA==
 
 ip@^1.1.0:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/ip/-/ip-1.1.9.tgz#8dfbcc99a754d07f425310b86a99546b1151e396"
-  integrity sha512-cyRxvOEpNHNtchU3Ln9KC/auJgup87llfQpQ+t5ghoC/UhL16SWzbueiCsdTnWmqAWl7LadfuwhlqmtOaqMHdQ==
+  version "1.1.8"
+  resolved "https://registry.npmjs.org/ip/-/ip-1.1.8.tgz"
+  integrity sha512-PuExPYUiu6qMBQb4l06ecm6T6ujzhmh+MeJcW9wa89PoAz5pvd4zPgN5WJV104mb6S2T1AwNIAaB70JNrLQWhg==
 
 ip@^2.0.0:
   version "2.0.0"
@@ -16008,7 +16020,7 @@ ohash@^1.1.3:
   integrity sha512-zuHHiGTYTA1sYJ/wZN+t5HKZaH23i4yI1HMwbuXm24Nid7Dv0KcuRlKoNKS9UNfAVSBlnGLcuQrnOKWOZoEGaw==
 
 "ohif-docs@file:/Users/naomileow/Documents/work/OHIF-Viewers/platform/docs":
-  version "3.8.0-beta.55"
+  version "3.8.0-beta.56"
   resolved "file:platform/docs"
   dependencies:
     "@docusaurus/core" "2.4.3"
@@ -20505,7 +20517,7 @@ tempy@^1.0.1:
     type-fest "^0.16.0"
     unique-string "^2.0.0"
 
-terser-webpack-plugin@^5.1.1, terser-webpack-plugin@^5.1.4, terser-webpack-plugin@^5.3.1, terser-webpack-plugin@^5.3.3, terser-webpack-plugin@^5.3.7:
+terser-webpack-plugin@^5.1.1, terser-webpack-plugin@^5.1.4, terser-webpack-plugin@^5.3.1, terser-webpack-plugin@^5.3.10, terser-webpack-plugin@^5.3.3:
   version "5.3.10"
   resolved "https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-5.3.10.tgz"
   integrity sha512-BKFPWlPDndPs+NGGCr1U59t0XScL5317Y0UReNrHaw9/FwhPENlq6bfgs+4yPfyP51vqC1bQ4rp1EfXW5ZSH9w==
@@ -21769,37 +21781,9 @@ webpack-virtual-modules@^0.6.1:
   resolved "https://registry.npmjs.org/webpack-virtual-modules/-/webpack-virtual-modules-0.6.1.tgz"
   integrity sha512-poXpCylU7ExuvZK8z+On3kX+S8o/2dQ/SVYueKA0D4WEMXROXgY8Ez50/bQEUmvoSMMrWcrJqCHuhAbsiwg7Dg==
 
-webpack@^5.50.0, webpack@^5.73.0, webpack@^5.81.0, webpack@5:
-  version "5.89.0"
-  dependencies:
-    "@types/eslint-scope" "^3.7.3"
-    "@types/estree" "^1.0.0"
-    "@webassemblyjs/ast" "^1.11.5"
-    "@webassemblyjs/wasm-edit" "^1.11.5"
-    "@webassemblyjs/wasm-parser" "^1.11.5"
-    acorn "^8.7.1"
-    acorn-import-assertions "^1.9.0"
-    browserslist "^4.14.5"
-    chrome-trace-event "^1.0.2"
-    enhanced-resolve "^5.15.0"
-    es-module-lexer "^1.2.1"
-    eslint-scope "5.1.1"
-    events "^3.2.0"
-    glob-to-regexp "^0.4.1"
-    graceful-fs "^4.2.9"
-    json-parse-even-better-errors "^2.3.1"
-    loader-runner "^4.2.0"
-    mime-types "^2.1.27"
-    neo-async "^2.6.2"
-    schema-utils "^3.2.0"
-    tapable "^2.1.1"
-    terser-webpack-plugin "^5.3.7"
-    watchpack "^2.4.0"
-    webpack-sources "^3.2.3"
-
-webpack@^5.90.3:
+webpack@^5.50.0, webpack@^5.73.0, webpack@^5.81.0, webpack@^5.90.3, webpack@5:
   version "5.90.3"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.90.3.tgz#37b8f74d3ded061ba789bb22b31e82eed75bd9ac"
+  resolved "https://registry.npmjs.org/webpack/-/webpack-5.90.3.tgz"
   integrity sha512-h6uDYlWCctQRuXBs1oYpVe6sFcWedl0dpcVaTf/YF67J9bKvwJajFulMVSYKHrksMB3I/pIagRzDxwxkebuzKA==
   dependencies:
     "@types/eslint-scope" "^3.7.3"
