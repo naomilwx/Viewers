@@ -1,5 +1,5 @@
 window.config = {
-  routerBasename: '/',
+  routerBasename: APP_ROUTER_BASENAME,
   customizationService: {
     dicomUploadComponent:
       '@ohif/extension-cornerstone.customizationModule.cornerstoneDicomUploadComponent',
