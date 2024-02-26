@@ -156,8 +156,6 @@ module.exports = (env, argv) => {
           publicPath: '/viewer-testdata',
         },
       ],
-      //public: 'http://localhost:' + 3000,
-      //writeToDisk: true,
       historyApiFallback: {
         disableDotRule: true,
         index: PUBLIC_URL + 'index.html',

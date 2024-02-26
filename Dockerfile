@@ -56,7 +56,7 @@ RUN yarn install --frozen-lockfile --verbose
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 ENV QUICK_BUILD true
 ENV APP_CONFIG=config/docker-config.js
-# ENV PUBLIC_URL=/app/
+ENV PUBLIC_URL=/app-placeholder/
 RUN yarn run build
 
 # # Stage 3: Bundle the built application into a Docker container
