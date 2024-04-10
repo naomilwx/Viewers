@@ -200,7 +200,6 @@ function WorkList({
       skipEmptyString: true,
     });
 
-    console.log('search', search, debouncedFilterValues);
     navigate({
       pathname: '/',
       search,

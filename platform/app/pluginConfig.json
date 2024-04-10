@@ -59,9 +59,6 @@
       "packageName": "@ohif/mode-tmtv"
     },
     {
-      "packageName": "@ohif/mode-microscopy"
-    },
-    {
       "packageName": "@ohif/mode-preclinical-4d"
     },
     {

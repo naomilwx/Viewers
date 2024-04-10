@@ -69,7 +69,6 @@
     "@ohif/i18n": "3.8.0-beta.74",
     "@ohif/mode-basic-dev-mode": "3.8.0-beta.74",
     "@ohif/mode-longitudinal": "3.8.0-beta.74",
-    "@ohif/mode-microscopy": "3.8.0-beta.74",
     "@ohif/ui": "3.8.0-beta.74",
     "@types/react": "^17.0.38",
     "classnames": "^2.3.2",
